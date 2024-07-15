@@ -30,7 +30,7 @@ def get_gemini_response(input,image):
 
 ##initialize our streamlit app
 
-st.set_page_config(page_title="Gemini Image Demo")
+st.set_page_config(page_title="LVM")
 
 st.header("Gemini Application")
 input=st.text_input("Input Prompt: ",key="input")
@@ -43,10 +43,10 @@ if uploaded_file is not None:
 
 submit=st.button("Tell me about the image")
 
-## If ask button is clicked
+## If ask button is clicked 
 
 if submit:
     
     response=get_gemini_response(input,image)
-    st.subheader("The Response is")
+    st.subheader("The Response is: ")
     st.write(response)
